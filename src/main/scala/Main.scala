@@ -4,7 +4,7 @@ import FormattingSyntax._
 object Main extends App {
   val cat = Cat("Fluffy", 5)
   val car = Car("BMW", "red", 2010)
-  println(cat.format) // Cat's name is Fluffy, it's age is 5
+  println(cat.format) // Cats name is Fluffy, its age is 5
   println(car.format) // That's a red BMW, made in year 2010
 }
 
@@ -17,7 +17,7 @@ trait Formatter[A] {
 object FormatterInstances {
   implicit val catPrinter: Formatter[Cat] = new Formatter[Cat] {
     def format(cat: Cat): String = {
-      s"Cat's name is ${cat.name}, it's age is ${cat.age}"
+      s"Cats name is ${cat.name}, its age is ${cat.age}"
     }
   }
 
