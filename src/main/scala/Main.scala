@@ -5,7 +5,7 @@ object Main extends App {
   val cat = Cat("Fluffy", 5)
   val car = Car("BMW", "red", 2010)
   println(cat.format) // Cats name is Fluffy, its age is 5
-  println(car.format) // That's a red BMW, made in year 2010
+  println(car.format) // That's a red BMW made in year 2010
 }
 
 // Type class definition
@@ -23,7 +23,7 @@ object FormatterInstances {
 
   implicit val carPrinter: Formatter[Car] = new Formatter[Car] {
     def format(car: Car): String = {
-      s"That's a ${car.color} ${car.brand}, made in year ${car.year}"
+      s"That's a ${car.color} ${car.brand} made in year ${car.year}"
     }
   }
 }
